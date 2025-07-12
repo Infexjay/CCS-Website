@@ -53,7 +53,7 @@ Coming soon on GitHub Pages or Vercel...
 1. **Clone this repo**:
    ```bash
    git clone https://github.com/infexjay/CCS-Website.git
-   cd fuoyejet-replica
+   cd CCS-Website
    
 2. Open index.html in browser:
 
