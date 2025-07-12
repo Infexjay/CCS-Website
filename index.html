@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCS</title>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header>
+    <div class="top-bar">
+      <div class="left-links">
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+      </div>
+      <div class="search">
+        🔍 Search
+      </div>
+    </div>
+
+    <!-- Typing Animation Title -->
+    <h1 id="typing-text"></h1>
+
+    <!-- Nav -->
+    <nav>
+      <ul>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Current</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Archives</a></li>
+        <li><a href="#">Announcements</a></li>
+        <li><a href="#">About</a></li>
+        <li><button onclick="toggleMode()">🌗</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- News Ticker -->
+  <div class="news-ticker">
+    <marquee behavior="scroll" direction="left">🚨 Volume 10 Now Live! | ✉ Submit your paper now! | 🧠 FUOYEJET is indexed with AJOL & DOI</marquee>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="main-container">
+      <div class="left-column">
+        <!-- Announcements -->
+        <article class="announcement" data-aos="fade-up">
+          <h2>🗓️ 2021-10-10</h2>
+          <h3><a href="#">STOPPAGE OF COMPLIMENTARY JOURNAL HARD COPIES</a></h3>
+          <p>Complimentary hard copies should NOT be sent to Corresponding Authors. <a href="#">Read More ➤</a></p>
+        </article>
+
+        <article class="announcement" data-aos="fade-up">
+          <h2>🗓️ 2021-09-11</h2>
+          <h3><a href="#">FUOYEJET now indexed with AJOL-African Journals OnLine</a></h3>
+        </article>
+
+        <article class="announcement" data-aos="fade-up">
+          <h2>🗓️ 2020-06-16</h2>
+          <h3><a href="#">FUOYEJET NOW HAS A DIGITAL OBJECT IDENTIFIER (DOI)</a></h3>
+        </article>
+
+        <!-- Current Issue -->
+        <section class="current-issue" data-aos="zoom-in">
+          <h2>Current Issue</h2>
+          <h3>Vol 10 No 2 (2025): FUOYE Journal of Engineering and Technology</h3>
+          <p><strong>Published:</strong> 2025-07-01</p>
+        </section>
+
+        <!-- New Journal Articles -->
+        <section class="journal-articles" data-aos="fade-up">
+          <article class="journal-entry">
+            <h4><a href="#">Estimation of the Relationship between Derived Dew Point Temperature and Ground Measured Climatic Parameters in Abeokuta, South-Western Nigeria</a></h4>
+            <p>Aduramo M. Sodunke, Enitan O. Ogunsola, Yusuf B. Lawal</p>
+          </article>
+
+          <article class="journal-entry">
+            <h4><a href="#">Influence of Deposition Conditions on the Optical and Electrical Behaviour of Electrodeposited CdMnTe Thin Films</a></h4>
+            <p>Nkiruka E. Adesiji, Olajide Ibukun-Olu Olusola, Sunday B. Ibikunle, Peace O. Elujoba, Daniel B. Ayodele, Winner O. Ajidahun</p>
+          </article>
+
+          <article class="journal-entry">
+            <h4><a href="#">Development and Evaluation of a Fingerprint-Based Biometric System for Secured Examination Admittance in Higher Institutions</a></h4>
+            <p>Abiodun O. Akanni, Ayangbekun J. Oluwafemi, Ayangbekun J. Oluwafemi, Samuel M. Olufunke</p>
+          </article>
+
+          <p><a href="#" class="view-all">View All Issues ➤</a></p>
+        </section>
+      </div>
+
+      <div class="right-column" data-aos="fade-left">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="#">For Readers</a></li>
+          <li><a href="#">For Authors</a></li>
+          <li><a href="#">For Librarians</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fake Chatbot -->
+  <div id="chatbot">
+    <p><strong>Bot:</strong> Need help? Ask me anything about the journal 📚</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      CCS © 2025 | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+    </div>
+    <div class="footer-right">
+      Platform & workflow by<br/>
+      <strong>CCS / CCS</strong>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

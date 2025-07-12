@@ -1,0 +1,243 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Light mode */
+body.light-mode {
+  background: #f4f4f4;
+  color: #111;
+}
+body.light-mode .announcement,
+body.light-mode .right-column,
+body.light-mode .current-issue,
+body.light-mode .top-bar,
+body.light-mode nav ul,
+body.light-mode #chatbot {
+  background: #fff;
+  color: #000;
+}
+
+/* Header */
+.top-bar {
+  background-color: #224422;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.top-bar a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a,
+nav ul li button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* News Ticker */
+.news-ticker {
+  background: #111;
+  padding: 10px;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+/* Layout */
+.main-container {
+  display: flex;
+  padding: 20px;
+}
+.left-column {
+  flex: 3;
+  padding-right: 20px;
+}
+.right-column {
+  flex: 1;
+  background: #111;
+  padding: 20px;
+  border-left: 1px solid #444;
+}
+.right-column h3 {
+  margin-bottom: 10px;
+}
+.right-column ul {
+  list-style: none;
+}
+.right-column ul li {
+  margin-bottom: 10px;
+}
+.right-column a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+/* Content Cards */
+.announcement,
+.current-issue {
+  background: #111;
+  border: 1px solid #444;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.announcement h3 a {
+  color: #00aaff;
+  text-decoration: none;
+}
+.current-issue {
+  background: #222;
+}
+
+.journal-articles {
+  margin-top: 40px;
+  background-color: #111;
+  padding: 20px;
+  border: 1px solid #444;
+}
+
+.journal-entry {
+  margin-bottom: 25px;
+}
+
+.journal-entry h4 a {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.journal-entry p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+.view-all {
+  color: #00aaff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  padding: 15px;
+  color: #fff;
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  max-width: 300px;
+  z-index: 999;
+}
+/* footer */
+footer {
+  margin-top: 50px;
+  background-color: #333;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  text-align: right;
+  font-style: italic;
+}
+
+/* Hoverable Article Card Effect */
+.announcement:hover,
+.journal-entry:hover,
+.current-issue:hover {
+  transform: scale(1.015);
+  box-shadow: 0 0 12px rgba(0, 170, 255, 0.2);
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+/* Links hover */
+a:hover {
+  color: #ffaa00;
+  transition: color 0.3s ease;
+}
+
+/* Animated Button Hover */
+nav ul li a, nav ul li button, .view-all {
+  transition: all 0.2s ease-in-out;
+}
+nav ul li a:hover, nav ul li button:hover, .view-all:hover {
+  background: #00aaff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Fake Glow Text */
+h3 a, h4 a {
+  transition: all 0.2s ease-in-out;
+}
+h3 a:hover, h4 a:hover {
+  text-shadow: 0 0 8px #00ffff;
+}
+
+/* Scroll Entry Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.announcement, .journal-entry, .current-issue {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Make entire journal card clickable */
+.journal-entry, .announcement, .current-issue {
+  cursor: pointer;
+}
