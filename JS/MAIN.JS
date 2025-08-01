@@ -1,17 +1,38 @@
-// Typing Animation (Pro Version)
-const text = "CCS";
-let i = 0;
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typing-text").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 1000); // smoother
+// AOS Animation
+if (window.AOS) AOS.init();
+
+// Theme toggle with localStorage
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+  // Persist theme on load
+  if(localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
   }
 }
-window.onload = typeWriter;
 
-
-// Dark/Light Mode Toggle
-function toggleMode() {
-  document.body.classList.toggle('light-mode');
+// Chatbot interactivity
+const showChatbotBtn = document.getElementById('show-chatbot');
+const chatbot = document.getElementById('chatbot');
+const hideChatbotBtn = document.getElementById('chatbot-toggle');
+if (showChatbotBtn && chatbot && hideChatbotBtn) {
+  showChatbotBtn.addEventListener('click', () => {
+    chatbot.style.display = 'block';
+    showChatbotBtn.style.display = 'none';
+  });
+  hideChatbotBtn.addEventListener('click', () => {
+    chatbot.style.display = 'none';
+    showChatbotBtn.style.display = 'inline-block';
+  });
 }
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+  });
+});
